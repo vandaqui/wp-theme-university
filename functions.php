@@ -8,3 +8,9 @@ function multiversity_files(){
     wp_enqueue_style('multiversity_extra_style', get_theme_file_uri('/build/index.css'));
 }
 add_action('wp_enqueue_scripts','multiversity_files');
+
+function multiversity_features(){
+    add_theme_support('title-tag');
+}
+
+add_action('after_setup_theme', 'multiversity_features');
